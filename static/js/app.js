@@ -9,7 +9,7 @@ function buildPlot() {
 
     const layout = {
       scope: "usa",
-      title: "Pet Pals",
+      title: "Disney Stuff",
       showlegend: false,
       height: 600,
             // width: 980,
