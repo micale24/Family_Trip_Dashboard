@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Machine Learning Predicted Wait Times</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/static/css/main.css">
+		<link rel="stylesheet" href="/static/css/landingcss.css">
+		<noscript><link rel="stylesheet" href="/static/css/noscript.css"></noscript>
+		<link rel="icon" type="image/png" href="/static/images/favicon-32x32.png" sizes="32x32">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  		<link rel="stylesheet" href="/static/css/ridestyle.css">
+
+		<script type=text/javascript>
+			$(function() {
+			  $('a#process_input').bind('click', function() {
+				$.getJSON('/MLrides', {
+				  proglang: $('input[name="proglang"]').val(),
+				}, function(data) {
+				  $("#ufo-table").text(data.result);
+				});
+				return false;
+			  });
+			});
+		</script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Family</strong> <span>First</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">Landing</a></li>
+							<li><a href="generic.html">Generic</a></li>
+							
+						<!-- </ul> -->
+						<!-- <ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Get Started</a></li>
+							<li><a href="#" class="button fit">Log In</a></li>
+						</ul> -->
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Machine Learning Predicted Wait Times</h1>
+									</header>
+									<span class="image main"><img src="/static/images/rides.jpg" alt="" /></span>
+									<div class="container">
+										<div class="row margin-top-50">
+										  <div class="col-md-2">
+											<aside class="filters">
+											  <div class="panel panel-default">
+												<div class="panel-heading">Wait Times</div>
+												<div class="panel-body">
+												  <form id="ufo-form">
+													<div class="form-group">
+													  <ul class="list-group" id="filters">
+														<li class="filter list-group-item">
+														  <label for="date">Enter a Date</label>
+														  <input class="form-control" id="datetime" type="text" placeholder="1/1/2022">
+														</li>
+													  </ul>
+													</div>
+													<button id="filter-btn" type="button" class="btn btn-default">Clear Form</button>
+												  </form>
+												</div>
+											  </div>
+											</aside>
+										  </div>
+										  <div class="col-md-10">
+											<div id="table-area" class="">
+											  <table id="ufo-table" class="table table-striped">
+												<thead>
+												  <tr>
+													<th class="table-head">Date</th>
+													<th class="table-head">Kilimanjaro Safaris</th>
+													<th class="table-head">Expedition Everest</th>
+													<th class="table-head">DINOSAUR</th>
+												  </tr>
+												</thead>
+												<tbody></tbody>
+											  </table>
+											</div>
+										  </div>
+										</div>
+									  </div>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+				<section id="contact">
+					<div class="inner">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field half">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="6"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="primary" /></li>
+									<li><input type="reset" value="Clear" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split">
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-envelope"></span>
+									<h3>Email</h3>
+									<p>Any feedback is welcomed and appreciated. &#129488</p>
+									<a href="#">familyfirst.com</a>
+								</div>
+							</section>
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-phone"></span>
+									<h3>Phone</h3>
+									<span>4109034444</span>
+								</div>
+							</section>
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-home"></span>
+									<h3>Address</h3>
+									<span>1234 Somewhere Disney #5432<br />
+									Orlando, FL 00000<br /></span>
+								</div>
+							</section>
+						</section>
+					</div>
+				</section>
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/static/js/jquery.min.js"></script>
+			<script src="/static/js/jquery.scrolly.min.js"></script>
+			<script src="/static/js/jquery.scrollex.min.js"></script>
+			<script src="/static/js/browser.min.js"></script>
+			<script src="/static/js/breakpoints.min.js"></script>
+			<script src="/static/js/util.js"></script>
+			<script src="/static/js/main.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+			<script src="/disney_MLpredictions.json"></script>
+			<script src="/static/js/app.js"></script>
+
+			
+
+	</body>
+</html>
